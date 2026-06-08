@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MLBB Draft Assistant - Full Database</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Cari Counter MLBB</h1>
+        <p>Sistem Deteksi Counter Hero Terintegrasi</p>
+    </header>
+
+    <div class="container">
+        <div class="search-box">
+            <input type="text" id="heroInput" placeholder="Ketik nama hero musuh (Contoh: Fanny, Chou, Nolan)...">
+            <button onclick="cariHero()">Cari Counter</button>
+        </div>
+
+        <div id="errorMsg" class="error-msg">
+            Hero tidak ditemukan. Pastikan ejaan nama hero benar sesuai dengan *in-game* (Contoh: "Yu Zhong", "Yi Sun-shin", "X.Borg").
+        </div>
+
+        <div id="resultCard" class="result-card">
+            <h2 id="heroName">Nama Hero</h2>
+            
+            <div class="info-group">
+                <h3>Klasifikasi Karakter:</h3>
+                <p id="heroRole">Role</p>
+            </div>
+
+            <div class="info-group">
+                <h3>Rekomendasi Hero Komparasi (Counter):</h3>
+                <p id="counterHeroes">Hero A, Hero B</p>
+            </div>
+
+            <div class="info-group">
+                <h3>Item Defense / Penunjang Wajib:</h3>
+                <div class="item-tags" id="counterItems"></div>
+            </div>
+            
+            <div class="info-group">
+                <h3>Strategi Pengondisian (Tips):</h3>
+                <p id="tipsText" style="color: #cbd5e1;"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="database.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
